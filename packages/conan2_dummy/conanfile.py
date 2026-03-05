@@ -8,6 +8,7 @@ class Conan2Dummy(ConanFile):
     """Conan2 Dummy Project to test the different toolchains."""
 
     name = "conan2_dummy"
+    version = "1.0.0"
     settings = "os", "compiler", "arch", "build_type"
     license = "ZF"
     url = (
