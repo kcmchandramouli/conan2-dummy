@@ -37,4 +37,4 @@ jobs:
 
       - name: Conan create
         run: |
-          conan create packages/conan2_dummy -pr:b=Linux -pr:h=Linux
+          conan build packages/conan2_dummy -pr:b=Linux -pr:h=Linux
