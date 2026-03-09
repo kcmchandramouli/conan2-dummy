@@ -15,6 +15,16 @@ class Conan2Dummy(ConanFile):
         "**************"
     )
     description = "Conan dummy repository"
+    exports_sources = (
+        "CMakeLists.txt",
+        "src/*",
+        "include/*",
+    )
+
+    
+    def layout(self):
+        # Standardize folders; ensures CMake uses the correct source dir in cache
+        cmake_layout(self)
 
     def generate(self):
         """Run the generators for the project."""
@@ -37,3 +47,7 @@ class Conan2Dummy(ConanFile):
         """Package the project using CMake."""
         cmake = CMake(self)
         cmake.install()
+
+    def package_info(self):
+        # Name of the built library if applicable
+        self.cpp_info.libs = ["conan2_dummy"]
