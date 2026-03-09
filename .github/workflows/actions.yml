@@ -38,3 +38,7 @@ jobs:
       - name: Conan Build
         run: |
           conan build packages/conan2_dummy -pr:b=Linux-gcc-11 -pr:h=Linux-gcc-11
+
+      - name: Conan Create
+        run: |
+          conan create packages/conan2_dummy -pr:b=Linux-gcc-11 -pr:h=Linux-gcc-11
