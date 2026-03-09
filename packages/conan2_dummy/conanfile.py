@@ -1,7 +1,7 @@
 """Conanfile for Conan2 Dummy Project to test the different toolchains."""
 
 from conan import ConanFile
-from conan.tools.cmake import CMakeToolchain, CMake, CMakeDeps
+from conan.tools.cmake import CMakeToolchain, CMake, CMakeDeps, cmake_layout
 
 
 class Conan2Dummy(ConanFile):
