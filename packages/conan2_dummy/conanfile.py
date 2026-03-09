@@ -9,7 +9,7 @@ class Conan2Dummy(ConanFile):
 
     name = "conan2_dummy"
     version = "1.0.0"
-    settings = "os", "compiler", "arch", "build_type"
+    settings = "os", "arch", "build_type", #"compiler"
     license = "ZF"
     url = (
         "**************"
