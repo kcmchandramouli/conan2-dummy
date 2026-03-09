@@ -35,6 +35,6 @@ jobs:
         run: |
           conan config install conan2_config
 
-      - name: Conan create
+      - name: Conan Build
         run: |
-          conan build packages/conan2_dummy -pr:b=Linux -pr:h=Linux -s:b build_type=Release -s:h build_type=Release
+          conan build packages/conan2_dummy -pr:b=Linux-gcc-11 -pr:h=Linux-gcc-11
